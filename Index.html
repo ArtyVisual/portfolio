@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="resp1.css">
+
+
+<body>
+    <div class="nav">
+        <nav style="background-color:rgb(67, 71, 85) ">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <div class="dropdown">
+                            <button id="dropbtn" type="button"
+                                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                aria-controls="mobile-menu" aria-expanded="false">
+
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#center2">About</a>
+                                <a href="#center2">Projects</a>
+                                <a href="#center2">Contact</a>
+                            </div>
+                        </div>
+
+                        <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                        <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex flex-shrink-0 items-center">
+                            <img class="h-8 w-auto" style="background-color:rgb(67, 71, 85);" src="img/BESTLOGO1.2.png" alt="Your Company">
+                        </div>
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="#center2"
+                                    class="text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                                <a href=""
+                                    class="text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="https://wa.me/9602652152"
+                                    class="text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        <button type="button"
+                            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">View notifications</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+
+                            </svg>
+                        </button>
+
+                        <!-- Profile dropdown -->
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button"
+                                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" src="img/IMG-20230114-WA0018 - Copy.jpg" alt="">
+                                </button>
+                            </div>
+
+                            <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                            <!-- <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                 Active: "bg-gray-100", Not Active: ""
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300" role="menuitem" tabindex="-1" id="user-menu-item-0">Profile</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 " role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2"></a>
+                </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+
+    </div>
+    </nav>
+    </div>
+    <div class="upper">
+        <div>
+            <div class="right first">I'm</div>
+            <div class="right second"><span id="text"></span><span id="cursor">|</span></div>
+            <br>
+            <br>
+            <div class="right third">A web-developer who provides great designs and development services for your
+                websites and
+                software Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat tempora illum explicabo non
+                libero
+                officia laborum quae ut rem eaque temporibus, exercitationem illo consequuntur tempore dolorem. Quia
+                nemo soluta sit.
+            </div>
+        </div>
+        <div class="picclass">
+            <img style="margin: 10% 0%; width: 110vh; " class="pic"  src="img/background3 .png" alt=""></div>
+        <div>
+            <div class="left_first">
+                Services
+            </div>
+            <div class="left_second">
+                let's build quality products in programming and design with my services
+            </div>
+            <div style="display: flex;">
+                <button class="icon-button hover:bg-gray-700 hover:text-yellow-600 block rounded-md px-3 py-2 text-base font-medium">
+                    <Span>Show More</Span>
+                    <span class="icon"></span>
+                </button>
+            </div>
+
+
+            <div class="icons">
+                <a target="_blank" href="https://www.instagram.com/abbas._.vajwana/"><img height="30px" width="30px"
+                         src="img/instagram.png" alt=""></a>
+                <a  target="_blank" href="https://twitter.com/?lang=en"><img height="30px" width="30px"
+                       src="img/twitter.png" alt=""></a>
+                <a target="_blank" href="https://wa.me/9602652152"><img height="30px" width="30px"
+                        src="img/whatsapp (1).png" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="center1">
+        <div class="comp1">
+            <ul class="comp2">
+                <li class="comp3"><img width="65px" src="img/youtube.png" alt=""></li>
+                <li class="comp3"><img width="75px" src="img/git.png" alt=""></li>
+                <li class="comp3"><img class="sam" width="65px" src="img/coursera.png" alt=""></li>
+                <li class="comp3"><img class="sam1" width="65px" src="img/wix.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div id="center2">
+        <div class="cert">
+            <div class="heading">Certificates</div>
+            <ul class="cert1">
+                <li>
+                    <a target="_blank" href="https://coursera.org/verify/BBC6LLBEFT9L">Foundation Of (UX) Design </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://coursera.org/verify/BBC6LLBEFT9L">UX design process stages : Empathize , Define ,Ideate</a>
+                    
+                </li>
+                
+                <li>
+                    <a target="_blank" href="https://coursera.org/verify/U96UQGH8F9NT">Developing Website using Wordpress</a>
+                    
+                </li>
+                <li>
+                    <a target="_blank" href="https://coursera.org/verify/BBC6LLBEFT9L">eSkill Data entry operator </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="heading_2">
+                What Can I Do 
+            </div>
+            <div class="blog">
+                As a web developer, my mission is simple:
+                to transform your digital aspirations into
+                reality.Whether you seek a stunning website,
+                seamless user experience, or robust functionality.
+                Let's collaborate to bring your vision to life,
+                one line of code at a time.
+            </div>
+        </div>
+        <div class="img1">
+            <div style="display: flex;">
+                <img src="img/alvaro-reyes-zvmZiw3vdsQ-unsplash.jpg" alt="">
+               <div class="tag">Ui/Ux Design</div>
+            </div>
+            <div class="line"></div>
+            <div  style="display: flex;">
+                <img src="img/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="">
+                <div class="tag">Web Development</div>        
+            </div>
+            <div class="line"></div>
+            <div  style="display: flex;">
+                <img src="img/4324809_18695.jpg" alt="">
+                <div class="tag">Graphic Design</div>
+            </div>
+        </div>
+        <script src="script2.js"></script>
+    </div>
+    <div class="secondlast">
+            <div class="card">
+                    <div class="front">
+                    <img class="img" src="img/web-programming.png"></img>
+                    <p>Ui/Ux Design</p>
+                </div>
+                <div class="back">
+                    <div>"Skilled in UI/UX design, creating intuitive interfaces for exceptional user experiences."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img class="img" src="img/web-coding.png"></img>
+                    <p>Web Development</p>
+                </div>
+                <div class="back">
+                    <div style="font-size: 2.3vh;">Proficient in web development,creating dynamic and responsive websites that drive user engagement and satisfaction."</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="front">
+                    <img class="img" src="img/graphic-design.png"></img>
+                    <p>Graphic Design</p>
+                </div>
+                <div class="back">
+                    <div style="font-size: 2.6vh;">"Skilled graphic designer creating eye-catching visuals that boost brand appeal and connect with audiences."</div>
+                </div>
+            </div>
+    </div>
+    <div class="last">
+        <div class="lang">
+            <img src="img/python.png" alt="">
+            <img src="img/mysql.png" alt="">
+            <img src="img/html.png" alt="">
+            <img src="img/css-3.png" alt="">
+            <img src="img/js-file.png" alt="">
+        </div>
+        <div class="lang lang1">
+            <img src="img/letter-c (1).png" alt="">
+            <img src="img/c- (1).png" alt="">
+            <img src="img/c-sharp (1).png" alt="">
+            <img src="img/www.png" alt="">
+            <img src="img/java.png" alt="">
+        </div>
+        <div class="lang">
+            <img src="img/atom.png" alt="">
+            <img src="img/adobe-photoshop-logo (1).png" alt="">
+            <img src="img/illustrator.png" alt="">
+            <img src="img/github.png" alt="">
+            <img src="img/oracle.png" alt="">   
+        </div>
+    </div> 
+    <script src="script1.js"></script>
+   
+    
+   
+</body>
+
+</html>
